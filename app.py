@@ -63,7 +63,7 @@ if st.button("Find Matching Jobs"):
             st.write("No matching jobs found.")
         else:
             for title, score in results:
-                st.write(f"**{title}** - Similarity Score: {score:.2f}")
+                st.write(f"**{title}** - Similarity Score: {score*100:.3f}")
     else:
         st.write("Please upload a PDF or enter text.")
 
