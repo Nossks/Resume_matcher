@@ -9,4 +9,5 @@ joblib
 scipy
 python-dotenv
 gensim
-
+PyMuPDF
+pdfminer.six
