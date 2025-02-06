@@ -1,13 +1,12 @@
 scikit-learn
 pandas
-numpy
-flask
 streamlit
 nltk
-spacy
 joblib
-scipy
 python-dotenv
 gensim
 PyMuPDF
 pdfminer.six
+scipy>=1.10.0
+numpy>=1.24.0
+
