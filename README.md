@@ -1,22 +1,56 @@
-# ResumeMatcher  
-_A simple tool to match resumes with job descriptions using Cosine Similarity._  
+🚀 Resume Matcher — Job Recommendation based on you Resume
+This is an end-to-end machine learning project that recommends suitable job roles based on a user's resume. The application is built using Flask for deployment and supports both PDF uploads and raw text input.
 
-##  Overview  
-ResumeMatcher helps job seekers and recruiters quickly assess how well a resume matches a job description. It uses **word2vec** from **gensim** and **Cosine Similarity** from the `sklearn` library to calculate a similarity score between resumes and job postings.  
+🧠 Features
+Upload your resume as a PDF or paste it as plain text.
+Automatically extracts and preprocesses resume content.
+Recommends job titles using a machine learning model.
+Lightweight and runs locally using Flask.
 
-The project is built using:  
-- **Python**   
-- **gensim** for creating word embedding  
-- **Flask** for a user-friendly interface  
+📁 Project Structure
+├── app.py                  # Flask backend handling resume input and predictions
+├── utils.py                # Utility functions: text preprocessing & recommendations
+├── main.ipynb              # Jupyter Notebook: dataset creation, model training
+├── model.pkl               # Trained machine learning model
+├── dataset.pkl             # Preprocessed dataset used for training
+├── templates/
+│   └── index.html          # HTML frontend for file upload and results display
+├── requirements.txt        # Python dependencies
+├── .gitignore              # Standard ignore rules
+└── README.md               # This file
 
-##  Features  
- Upload a resume (PDF/TXT)  
- Input a job description  
- Get a similarity score  
- Simple, fast, and easy-to-use UI  
+🛠️ How It Works
+User submits a resume (PDF or text).
+The backend extracts and preprocesses the content.
+A trained model predicts the most suitable job titles.
+The recommendations are displayed on the web interface.
 
-## Technologies Used
- Python
- Flask (UI)
- gensim
- NLTK 
+🚦 Sample Workflow
+![Workflow of Nossks](static/workflow.png)
+
+🧪 Running Locally
+1. Clone the repository:
+git clone https://github.com/nossks/Resume_Matcher
+cd Resume_Matcher
+
+2. Create a virtual environment and install dependencies:
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
+3. Run the application:
+python app.py
+Visit http://127.0.0.1:5000 in your browser.
+
+📦 Dependencies
+Gensim
+scikit-learn
+pandas
+numpy
+Regex
+Flask
+PyMuPDF (fitz)
+
+💡 Future Improvements
+Add user authentication and save history.
+Use LLMs (e.g., GPT-based) for more context-aware recommendations.
