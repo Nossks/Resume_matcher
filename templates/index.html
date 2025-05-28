@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing_page</title>
+</head>
+<body>
+    <div style="text-align:center; margin-top: 50px;">
+        <h1>Upload or Paste your resume for getting job recommendation based on it</h1>
+        <form action="/" enctype="multipart/form-data" method="post">
+            <label for="resume_file">Upload pdf</label>
+            <input type="file" name="resume_file" accept=".pdf" id="resume_file"><br><br>
+
+            <label for="resume_text">Paste Resume</label><br>
+            <input type="text" name="resume_text" id="resume_text"><br><br>
+
+            <input type="submit" value="get recommendation">
+        </form>
+
+        <br><br>
+
+        {% if recommendation %}
+            <h3>This may be the best fit for you</h3>
+            <ul style="display: inline-block; text-align: left;">
+                {% for job in recommendation %}
+                    <li>{{ job }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>

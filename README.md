@@ -7,7 +7,7 @@ ResumeMatcher helps job seekers and recruiters quickly assess how well a resume 
 The project is built using:  
 - **Python**   
 - **gensim** for creating word embedding  
-- **Streamlit** for a user-friendly interface  
+- **Flask** for a user-friendly interface  
 
 ##  Features  
  Upload a resume (PDF/TXT)  
@@ -17,6 +17,6 @@ The project is built using:
 
 ## Technologies Used
  Python
- Streamlit (UI)
+ Flask (UI)
  gensim
  NLTK 
